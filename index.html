@@ -4,23 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maja Wendelin</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- jaro -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Caveat:wght@500&family=Expletus+Sans:ital,wght@0,400..700;1,400..700&family=Jaro:opsz@6..72&family=Jua&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Saira:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 </head>
-<body class="start">
-    <header>
-        <ul>
-            <li class="header-home">
+<body class="index">
+    <header id="header-index">
+        <button class="hamburger-button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="header-items-container">
+            <li class="header-item" id="header-home">
                 <a href="">Home</a>
             </li>
 
-            <li class="header-portfolio">
+            <li class="header-item" id="header-portfolio">
                 <a href="">Portfolio</a>
             </li>
 
-            <li class="header-about">
+            <li class="header-item" id="header-about">
                 <a href="">About</a>
             </li>
 
-            <li class="header-contact">
+            <li class="header-item" id="header-contact">
                 <a href="">Contact</a>
             </li>
         </ul>
@@ -171,5 +182,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
