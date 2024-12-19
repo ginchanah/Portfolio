@@ -34,6 +34,7 @@
 
 h1, h2, h3, h4 {
     font-family: var(--font-heading);
+    margin: 0px;
 }
 
 body {
@@ -43,6 +44,12 @@ body {
 
 img {
     max-width: 100%;
+}
+
+h2{ 
+    text-align: center;
+    font-size: 3rem;
+    padding: 2rem;
 }
 
 
@@ -57,9 +64,13 @@ img {
 header {
     display: flex;
     flex-direction: column;
-    align-items: end;
+    align-items: center;
+
+    padding-bottom: 1rem;
 
     background: var(--color-yellow);
+
+    
 }
 
 .hamburger-button{
@@ -101,7 +112,7 @@ header {
 /*button animation*/
 
 .hamburger-button input:not(:checked) ~ span:nth-child(2) {
-    transform: rotate(45deg) translate(14px, 21px);
+    transform: rotate(405deg) translate(14px, 21px);
 }
 
 
@@ -110,7 +121,7 @@ header {
 }
 
 .hamburger-button input:not(:checked) ~ span:nth-child(4) {
-    transform: rotate(-45deg) translate(6px, -10px);
+    transform: rotate(-405deg) translate(6px, -10px);
 }
 
 /* header list styling mobile*/
@@ -163,7 +174,19 @@ header {
 
 /* media query bigger display */
 
+@media  (min-width: 588px){
+    header{
+        align-items: end;
+    }
+}
+
 @media (min-width: 734px) {
+    header{
+        position: sticky;
+        top: 0px;
+        z-index: 1000;
+    }
+
     .hamburger-button {
         display: none;
     }
@@ -272,8 +295,10 @@ header {
     font-weight: 600;
  }
 
+ /* scroll to find out more */
+
 .scroll {
-    padding-top: 2rem;
+    padding: 2rem 0 2rem 0;
     display: grid;
     justify-items: center;
 }
@@ -318,13 +343,13 @@ header {
 
 @media (min-width: 854px) {
     .landing-page h1{
-        max-width: 37rem;
-        padding: 7rem 0;
+        padding: 7rem 0 6rem 0;
     }
 
-    .whole-bubble{
-        position: absolute;
+    .landing-page p {
+        font-size: 1.2rem;
     }
+
 
     .whole-bubble:first-of-type{
         transform: translate(-10rem, 2rem);
@@ -334,22 +359,230 @@ header {
         transform: translate(10rem, 30rem);
     }
 
+}
+
+@media (min-width: 1200px){
+    .landing-page h1{
+        max-width: 45rem;
+        padding: 5rem 0 2rem 0;
+    }
+
+    .landing-page p {
+        font-size: 1.5rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .speechbubble{
+        max-width: 35rem;
+    }
+
+    .whole-bubble:first-of-type{
+        transform: translate(-19rem, 2rem);
+    }
+
+    .whole-bubble:nth-of-type(2){
+        transform: translate(19rem, 28rem);
+    }
+
     .triangletop {
-        border-left: 2rem solid transparent;
-        border-right: 0.5rem solid transparent;
-        margin: 0 4rem 0 0;
+        margin: 0 0 0 15rem;
     }
     
     .trianglebottom {
-        border-left: 0.5rem solid transparent;
-        border-right: 2rem solid transparent;
+        margin: 0 17.5rem 0 0;
     }
+
 }
 
-@media (min-width: 1284px){
+
+    /* ************************** */
+    /* Section 2: Portfolio       */
+    /* ************************** */
+.portfolio{
+    background: var(--color-pink-light);
+    padding: 0 1rem;
+}
+
+.portfolio h3{
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+/* grid and grid positioning */
+
+.portfolio-item-container {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.portfolio-item{
+    background: #FFCC3F;
+    max-width: 100vw;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+
+    transition: 0.2s;
+}
+
+.portfolio-item:hover{
+    transform: scale(103%);
+}
+
+@media (min-width: 570px){
+    .portfolio-item a {
+        display: grid;
+        grid-template-columns: 2.5fr 6fr;
+        grid-template-rows: max-content max-content max-content;
+    }
+
+    .portfolio-item a figure {
+        grid-column: 1/2;
+        min-height: 100%;
+        grid-row: 1/-1;
+    }
+
+    .portfolio-item a figure img {
+        height: auto;
+        width: auto;
+    }
+
+    .portfolio-item a>*:not(figure){
+        grid-column: 2/3;
+    }
+
+    #minigamefigure img{
+        transform: scale(170%);
+    }
+
+    #lievestad #lievestadfigure img{
+        align-self: flex-start;
+    }
+
+
+    #boekenzoeker #boekenzoekerfigure img{
+        align-self: flex-end;
+        height: 100%;
+        min-width: 20rem;
+    }
+
+    #motiongraphicfigure img{
+        transform: scale(170%);
+    }
+
+
+}
+
+/* portfolio item appearance */
+
+.portfolio-item a figure {
+    width: 100%;
+    margin: 0px;
+    overflow: hidden;
+    height: 10rem;
+
+    display: flex;
+    align-items: center; 
+}
+
+.portfolio-item a figure img {
+    width: 100%;
+}
+
+#boekenzoeker img, #illustration img{
+    align-self: flex-start;
+}
+
+#lievestad img {
+    align-self: flex-end;
+}
+
+.portfolio-text {
+    margin: 1rem 1rem;
+    line-height: 22px;
+}
+
+.portfolio-text p{
+    margin: 0px;
+}
+
+/* headings of portfolio items */
+.portfolio article>a>div:first-of-type{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 4rem;
+    position: relative;
+}
+
+.portfolio article>a{
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.portfolio article>a>div:first-of-type>p{
+    position: absolute;
+    margin: 0px;
+    top: 2.6rem;
+}
+
+.frontend-heading{
+    background: var(--color-green);
+}
+
+.ui-heading{
+    background: var(--color-blue-dark);
+}
+
+.visual-heading{
+    background: var(--color-red);
+}
+
+/* tags */
+
+.tag-container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 3rem;
+}
+
+.tag-container p{
+    font-size: 0.75rem;
+    text-align: center;
     
-
+    width: 5rem;
+    margin: 0 0.7rem 0.7rem 0;
+    padding: 0.5rem 1rem;
+    border-radius: 3rem;
 }
+
+.frontendtag{
+    background: var(--color-green);
+}
+
+.UItag{
+    background: var(--color-blue-dark);
+}
+
+.visualtag{
+    background: var(--color-red);
+}
+
+/* more to come */
+
+.portfolio-item-container>p{
+    font-family: var(--font-heading);
+    text-align: center;
+    font-size: 1.7rem;
+}
+
+
+
+
 
 
 
