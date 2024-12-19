@@ -13,11 +13,12 @@
 </head>
 <body class="index">
     <header id="header-index">
-        <button class="hamburger-button">
+        <label class="hamburger-button">
+            <input type="checkbox" class="toggle">
             <span></span>
             <span></span>
             <span></span>
-        </button>
+        </label>
         <ul class="header-items-container">
             <li class="header-item" id="header-home">
                 <a href="">Home</a>
@@ -42,24 +43,31 @@
             <h1>
                 <img src="images/logo.png" alt="Maja Wendelin">
             </h1>
-            <div class="speechbubble">
-                <p>Hi, I’m Maja!
-                    An (aspiring) frontend developer and designer, currently looking for an internship!</p>
-                <svg width="678" height="195" viewBox="0 0 678 195" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="599" height="161" rx="62" fill="white"/>
-                    <path d="M655.986 164.413L550.958 131.913L588.014 80.2674L655.986 164.413Z" fill="white"/>
-                </svg>
-            </div>
-            <div class="speechbubble">
-                <p>Hi, I’m Maja!
-                    An (aspiring) frontend developer and designer, currently looking for an internship!</p>
-                <svg width="683" height="187" viewBox="0 0 683 187" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="84" width="599" height="187" rx="62" fill="white"/>
-                    <path d="M19.5524 31.0565L126.353 57.1457L92.4878 110.938L19.5524 31.0565Z" fill="white"/>
-                </svg>
+            <div class="whole-bubble">
+                <div class="speechbubble">
+                    <p>Hi, I’m Maja! An (aspiring) frontend developer and designer, <span>currently looking for an internship!</span></p>
+                    <svg width="678" height="195" viewBox="0 0 678 195" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="599" height="161" rx="62" fill="white"/>
+                        <path d="M655.986 164.413L550.958 131.913L588.014 80.2674L655.986 164.413Z" fill="white"/>
+                    </svg>
+                </div>
+                <div class="triangletop"></div>
             </div>
 
-            <div>
+            <div class="whole-bubble">
+                <div class="trianglebottom"></div>
+                <div class="speechbubble">
+                    <p>I love experimenting with different ways in which we can interact with the internet. For me, the internet is a creative space in which we can express ourselves.
+                    </p>
+                    <svg width="683" height="187" viewBox="0 0 683 187" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="84" width="599" height="187" rx="62" fill="white"/>
+                        <path d="M19.5524 31.0565L126.353 57.1457L92.4878 110.938L19.5524 31.0565Z" fill="white"/>
+                    </svg>
+                </div>
+            </div>
+            
+
+            <div class="scroll">
                 <p>Scroll to find out more</p>
                 <img src="images/Arrow1.png" alt="arrow">
             </div>

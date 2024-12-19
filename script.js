@@ -2,7 +2,7 @@
 console.log("hi");
 
 
-let menuButton = document.querySelector("header button")
+let menuButton = document.querySelector("header label input")
 let menuList = document.querySelector("header ul")
 
 menuButton.onclick = showMenu;
