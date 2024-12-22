@@ -111,17 +111,17 @@ header {
 
 /*button animation*/
 
-.hamburger-button input:not(:checked) ~ span:nth-child(2) {
+.hamburger-button input:checked ~ span:nth-child(2) {
     transform: rotate(405deg) translate(14px, 21px);
 }
 
 
-.hamburger-button input:not(:checked) ~ span:nth-child(3) {
+.hamburger-button input:checked ~ span:nth-child(3) {
     opacity: 0; 
 }
 
-.hamburger-button input:not(:checked) ~ span:nth-child(4) {
-    transform: rotate(-405deg) translate(6px, -10px);
+.hamburger-button input:checked ~ span:nth-child(4) {
+    transform: rotate(-405deg) translate(5px, -11px);
 }
 
 /* header list styling mobile*/
@@ -553,8 +553,6 @@ header {
 .tag-container p{
     font-size: 0.75rem;
     text-align: center;
-    
-    width: 5rem;
     margin: 0 0.7rem 0.7rem 0;
     padding: 0.5rem 1rem;
     border-radius: 3rem;
