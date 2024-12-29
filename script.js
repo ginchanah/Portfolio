@@ -29,4 +29,21 @@ const header = document.getElementById('header-index');
         } else {
             header.classList.remove('shadow'); // Remove shadow class when at the top
         }
+});
+
+const headerItems = document.querySelectorAll('.header-item');
+
+
+headerItems.forEach(headerItem => {
+    headerItem.addEventListener('mousedown', () => {
+        headerItem.classList.add('active');
     });
+
+    headerItem.addEventListener('mouseup', () => {
+        headerItem.classList.remove('active');
+    });
+
+    headerItem.addEventListener('mouseleave', () => {
+        headerItem.classList.remove('active'); // Remove class if mouse leaves while pressed
+    });
+});

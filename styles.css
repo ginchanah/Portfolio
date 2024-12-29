@@ -13,7 +13,7 @@
 
     /* font-family */
     --font-body:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    --font-heading: 'chewy', 'Jaro', sans-serif;
+    --font-heading: 'Jaro', sans-serif;
     --font-heading-alt: 'Chewy', sans-serif;
 
     /* margins and heights */
@@ -170,12 +170,26 @@ header {
     
 }
 
+@media (max-width: 682px) {
+    .header-item a {
+        font-family: var(--font-heading-alt);
+    }
+}
+
+
 .header-item{
     min-width: 100%;
     height: 4rem;
     display: flex;
     align-items: center;
+    transition: 0.2s;
 }
+
+.header-item:hover {
+    transform: scale(107%);
+}
+
+
 
 #header-home{
     background: var(--color-red);
@@ -216,6 +230,8 @@ header {
         box-shadow: 0 5px 7px rgba(0, 0, 0, 0.1); /* Shadow effect */
     }
 
+   
+
     .hamburger-button {
         display: none;
     }
@@ -238,6 +254,7 @@ header {
         font-size: 1.6rem;
         color: var(--color-text);
         padding: 0 0 6px 0;
+       
     }
 
     .header-item {
@@ -250,6 +267,15 @@ header {
         text-align: center;
         border-radius: var(--border-radius);
         box-shadow: -9px 9px;
+
+        transition: box-shadow 0.2s, transform 0.2s;
+    }
+
+    
+
+    .header-item.active{
+        box-shadow: none;
+        transform: translate(-9px, 9px);
     }
 }
 
@@ -338,6 +364,12 @@ header {
     font-size: 1.3rem;
     margin: 0 0 0.5rem 0;
     font-family: var(--font-heading);
+}
+
+@media (max-width: 682px) {
+    .scroll p {
+        font-family: var(--font-heading-alt);
+    }
 }
 
 /* media bigger screen landing page */
@@ -640,12 +672,25 @@ header {
 }
 
 /* more to come */
+.more{
+    transition: 1s;
+}
+.more:hover{
+    transform: rotate(360deg) scale(110%); 
+}
+
 
 .portfolio-item-container>p{
     font-family: var(--font-heading);
     text-align: center;
     font-size: 1.7rem;
     margin-bottom: 3.5rem;
+}
+
+@media (max-width: 682px) {
+    .portfolio-item-container>p {
+        font-family: var(--font-heading-alt);
+    }
 }
 
 @media (min-width: 1176px) {
@@ -722,6 +767,12 @@ header {
     align-items: center;
 
     text-decoration: none;
+
+    transition: 0.2s;
+}
+
+.cv:hover{
+    transform: scale(105%);
 }
 
 .cv p{
@@ -729,6 +780,12 @@ header {
     color: black;
     font-size: 1.5rem;
     margin-right: 1rem;
+}
+
+@media (max-width: 682px) {
+    .cv p{
+        font-family: var(--font-heading-alt);
+    }
 }
 
 .cv p::after{
@@ -883,7 +940,7 @@ footer h2 {
 }
 
 #links a:hover{
-    transform: scale(105%);
+    transform: scale(110%);
     color: var(--color-white);
     filter: brightness(0) invert(1);
 }
