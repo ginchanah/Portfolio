@@ -21,25 +21,25 @@
         </label>
         <ul class="header-items-container">
             <li class="header-item" id="header-home">
-                <a href="">Home</a>
+                <a href="#home">Home</a>
             </li>
 
             <li class="header-item" id="header-portfolio">
-                <a href="">Portfolio</a>
+                <a href="#portfolio">Portfolio</a>
             </li>
 
             <li class="header-item" id="header-about">
-                <a href="">About</a>
+                <a href="#about">About</a>
             </li>
 
             <li class="header-item" id="header-contact">
-                <a href="">Contact</a>
+                <a href="#contact">Contact</a>
             </li>
         </ul>
     </header>
 
     <main>
-        <section class="landing-page">
+        <section class="landing-page" id="home">
             <h1>
                 <img src="images/logo.png" alt="Maja Wendelin">
             </h1>
@@ -67,13 +67,13 @@
             </div>
             
 
-            <div class="scroll">
+            <div class="scroll" id="turntransparent">
                 <p>Scroll to find out more</p>
                 <img src="images/Arrow1.png" alt="arrow">
             </div>
         </section>
 
-        <section class="portfolio">
+        <section class="portfolio" id="portfolio">
             <h2>Portfolio</h2>
             <div class="portfolio-item-container">
                 <article class="portfolio-item" id="minigame">
@@ -177,46 +177,52 @@
             </div>   
         </section>
 
-        <section class="about">
+        <section class="about" id="about">
             <h2>About</h2>
-            <p>
-                Hey! I’m Maja and I’m an (asipiring) frontend developer, designer and sometimes illustrator. <span>I’m currently looking for an internship </span>to further my knowledge of frontend development and learn about the real-world applications for my skills. 
-            </p>
-            <p>
-                I’m always on the lookout for new projects in which I can combine my passion for design with my interest in coding. I love working on the web and ensuring that everyone is having a good time while they’re browsing.
-            </p>
-            <p>
-                Currently, I’m based in Amsterdam, where I study Communication and Multimedia Design at the Amsterdam University of Applied Sciences. 
-                In the course of my studies, I’ve acquired skills in <span>UX/UI Design, HTML, CSS and Javascript.</span>
-            </p>
-            <p>
-                Before I lived in the Netherlands, I also lived in Germany where I was born and raised, and South Korea, where I did an exchange year.
-            </p>
-            <p>
-                I’m a big fan of tea, making music and travelling back and forth countries to see all my friends and family, though Deutsche Bahn makes that endeavour tedious at times.
-            </p>
+            <div class="abouttext">
+                <p>
+                    Hey! I’m Maja and I’m an (asipiring) frontend developer, designer and sometimes illustrator. <span>I’m currently looking for an internship </span>to further my knowledge of frontend development and learn about the real-world applications for my skills. 
+                </p>
+                <p>
+                    I’m always on the lookout for new projects in which I can combine my passion for design with my interest in coding. I love working on the web and ensuring that everyone is having a good time while they’re browsing.
+                </p>
+                <p>
+                    Currently, I’m based in Amsterdam, where I study Communication and Multimedia Design at the Amsterdam University of Applied Sciences. 
+                    In the course of my studies, I’ve acquired skills in <span>UX/UI Design, HTML, CSS and Javascript.</span>
+                </p>
+                <p>
+                    Before I lived in the Netherlands, I also lived in Germany where I was born and raised, and South Korea, where I did an exchange year.
+                </p>
+                <p>
+                    I’m a big fan of tea, making music and travelling back and forth countries to see all my friends and family, though Deutsche Bahn makes that endeavour tedious at times.
+                </p>
+            </div>
+            
+            <figure id="aboutfoto">
+                <img src="images/photoofme.png" alt="a photo of Maja">
+            </figure>
 
-            <a href="">
+            <a href="/media/CV-Maja-Wendelin.pdf" class="cv" target="_blank">
                 <img src="images/CV.png" alt="Curriculum Vitae">
                 <p>find my CV here</p>
             </a>
         </section>
     </main>
 
-    <footer>
+    <footer id="contact">
         <h2>If you want to say hello</h2>
-        <div>
-            <div>
-                <a href="">
-                    <img src="images/linkedinlogo.png" alt="LinkedIn logo">
+        <div id="links">
+            <div id="socials">
+                <a href="https://www.linkedin.com/in/maja-wendelin-51027627a/" target="_blank">
+                    <img src="images/linkedinlogo2.png " alt="LinkedIn logo" >
                 </a>
-                <a href="">
-                    <img src="images/instalogo.png" alt="instagram logo">
+                <a href="https://www.instagram.com/ginchanah/" target="_blank">
+                    <img src="images/instalogo2.png" alt="instagram logo">
                 </a>
             </div>
-            <div>
-                <a href="">mawenjadelin@gmail.com</a>
-                <a href="">+31 6 42840238</a>
+            <div id="mail-phone">
+                <a href="mailto:mawenjadelin@gmail.com">mawenjadelin@gmail.com</a>
+                <a href="tel:+31642840238">+31 6 42840238</a>
             </div>
         </div>
     </footer>

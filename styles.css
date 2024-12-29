@@ -16,7 +16,7 @@
     --font-heading: 'Jaro', sans-serif;
 
     /* margins and heights */
-    --header-height: 8rem;
+    --header-height: 5rem;
     
     /* radiussses */
     --border-radius: 1rem;
@@ -30,7 +30,16 @@
 *{
     font-family: var(--font-body);
     box-sizing: border-box;
+    scroll-behavior: smooth;
+    /* Adjust this value to the height of your header */
 }
+
+@media (min-width: 734px) {
+    *{
+        scroll-padding-top: var(--header-height); 
+    }
+}
+
 
 h1, h2, h3, h4 {
     font-family: var(--font-heading);
@@ -51,6 +60,10 @@ h2{
     text-align: center;
     font-size: 3rem;
     padding: 2rem;
+}
+
+main {
+    overflow: hidden;
 }
 
 
@@ -186,6 +199,14 @@ header {
         position: sticky;
         top: 0px;
         z-index: 1000;
+
+        /* shadow when scroling */
+        box-shadow: none; /* No shadow initially */
+        transition: box-shadow 0.3s; /* Smooth transition for shadow */
+    }
+
+    .shadow {
+        box-shadow: 0 5px 7px rgba(0, 0, 0, 0.1); /* Shadow effect */
     }
 
     .hamburger-button {
@@ -207,16 +228,18 @@ header {
     .header-item a {
         text-decoration: none;
         font-family: var(--font-heading);
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         color: var(--color-text);
-        padding: 0px;
+        padding: 0 0 6px 0;
     }
 
     .header-item {
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-        padding: 0.6rem 0rem;
-        min-width: 10rem;
+        height: 3rem;
+        min-width: 8rem;
         text-align: center;
         border-radius: var(--border-radius);
         box-shadow: -9px 9px;
@@ -396,6 +419,11 @@ header {
 
 }
 
+#turntransparent {
+    opacity: 1; /* Start fully opaque */
+    transition: opacity 0.1s; /* Smooth transition */
+}
+
 
     /* ************************** */
     /* Section 2: Portfolio       */
@@ -417,6 +445,8 @@ header {
     gap: 1.5rem;
 }
 
+
+
 .portfolio-item{
     background: #FFCC3F;
     max-width: 100vw;
@@ -426,15 +456,26 @@ header {
     transition: 0.2s;
 }
 
+
 .portfolio-item:hover{
     transform: scale(103%);
+    filter: contrast(120%);
 }
 
 @media (min-width: 570px){
+    .portfolio-item{
+        height: 15rem;
+    }
+
     .portfolio-item a {
+        height: 100%;
         display: grid;
         grid-template-columns: 2.5fr 6fr;
-        grid-template-rows: max-content max-content max-content;
+        grid-template-rows: max-content max-content 1fr;
+    }
+
+    .portfolio-item a .tag-container{
+        align-self: end;
     }
 
     .portfolio-item a figure {
@@ -453,7 +494,7 @@ header {
     }
 
     #minigamefigure img{
-        transform: scale(170%);
+        transform: scale(230%);
     }
 
     #lievestad #lievestadfigure img{
@@ -466,13 +507,33 @@ header {
         height: 100%;
         min-width: 20rem;
     }
+    
+    #illustrationfigure img{
+        transform: scale(110%);
+    }
 
     #motiongraphicfigure img{
         transform: scale(170%);
     }
-
-
 }
+
+@media (min-width: 597px) {
+    .portfolio-item-container {
+        display: grid;
+        grid-template-columns: repeat( auto-fit, minmax(550px, 560px));
+        justify-content: center;
+    }
+
+    .portfolio-item{
+        max-width: 100%; 
+    }
+
+    
+}
+
+
+
+
 
 /* portfolio item appearance */
 
@@ -579,6 +640,294 @@ header {
     font-size: 1.7rem;
     margin-bottom: 3.5rem;
 }
+
+@media (min-width: 1176px) {
+    .more{
+        font-family: var(--font-heading);
+        text-align: center;
+        font-size: 1.7rem;
+        margin: 0px;
+        padding: 0px;
+
+        align-self: center;
+        text-align: center;
+    }
+
+    .portfolio-item-container > p{
+        margin-bottom: 0px;
+    }
+
+    .portfolio{
+        padding-bottom: 3rem;
+    }
+
+}
+
+@media (min-width: 1407px) {
+    .portfolio-item-container{
+        transform: scale(105%);
+        margin: 2rem 0;
+    }
+
+}
+
+@media (min-width: 1570px) {
+    .portfolio-item-container{
+        transform: scale(120%);
+        margin: 5rem 0;
+    }
+
+}
+
+    /* ************************** */
+    /* Section 3: About           */
+    /* ************************** */
+
+.about {
+    background: var(--color-blue-light);
+    display: grid;
+}
+
+.about span {
+    font-weight: 600;
+}
+
+.abouttext {
+    margin: 0 2rem;
+    max-width: 32rem;
+    justify-self: center;
+}
+
+#aboutfoto{
+    grid-row: 4/5;
+    margin-bottom: 0px;
+    display: flex;
+}
+
+
+
+/* Find my CV layout */
+
+.cv {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+}
+
+.cv p{
+    font-family: var(--font-heading);
+    color: black;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.cv p::after{
+    content: '→';
+}
+
+
+@media (min-width: 558px){
+
+    #about h2 {
+        grid-column: 1/3;
+    }
+
+    #aboutfoto {
+        grid-column: 2/3;
+        grid-row: 3/4;
+
+        max-width: 217px;
+    }
+
+    .cv {
+        grid-column: 1/2;
+        grid-row: 3/4;
+        margin: 0 0 0 2rem;
+    }
+
+    .cv p {
+        font-size: 1.3rem;
+    }
+
+
+    .abouttext {
+        grid-column: 1/3;
+        
+    }
+}
+
+@media (min-width: 592px){
+    .cv{
+        justify-self: right;
+    }
+
+    #aboutfoto{
+        justify-self: left;
+    }
+}
+
+@media (min-width: 940px){
+    .abouttext {
+        grid-column: 1/2; 
+    }
+
+    .cv{
+        justify-self: center;
+        align-self: start;
+        margin-right: 8rem;
+        margin-bottom: 2rem;
+    }
+
+    #aboutfoto{
+        grid-row: 2/4;
+        margin: 0px;
+        align-self: end;
+        max-width: 413px;
+    }
+}
+
+@media (min-width: 1211px){
+    .abouttext {
+        max-width: 600px;
+        font-size: 1.1rem;
+    }
+
+    .cv p {
+        font-size: 1.5rem;
+    }
+
+    .about {
+        grid-template-columns: 2fr 1.3fr;
+    }
+
+    #aboutfoto{
+        justify-self: left;
+    }
+}
+
+@media (min-width: 1266px){
+    #aboutfoto{
+        max-width: 450px;
+    }
+
+    .abouttext{
+        margin-left: 6vw;
+    }
+}
+
+@media (min-width: 1400px){
+    .abouttext {
+        font-size: 1.2rem;
+    }
+
+    .cv p {
+        font-size: 1.7rem;
+    }
+
+    #aboutfoto{
+        max-width: 470px;
+    }
+}
+
+    /* ************************** */
+    /* Footer                     */
+    /* ************************** */
+footer {
+    background: var(--color-green); 
+}
+footer h2 {
+    font-size: 2rem;
+    padding: 1rem 2rem 0 2rem;
+}
+
+#links {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    margin: 0 2rem;
+}
+
+#links a{
+    transition: 0.2s;
+}
+
+#mail-phone {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-row: 1/2;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+#mail-phone a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-size: 1.1rem;
+}
+
+#socials {
+    display: flex;
+    justify-content: space-between;
+    width: 35vw;
+}
+
+#links a:hover{
+    transform: scale(105%);
+    color: var(--color-white);
+    filter: brightness(0) invert(1);
+}
+
+@media (min-width: 410px){
+    #links {
+        justify-content: space-between;
+    }
+
+    #mail-phone{
+        grid-row: 2/3;
+        grid-column: 2/3;
+        text-align: left;
+        margin: 0 0 1rem 0;
+        justify-items: right;
+    }
+
+    #socials{
+        grid-row: 2/3;
+        grid-column: 1/2; 
+        justify-content: left;
+    }
+
+    #socials a:first-of-type{
+        margin-right: 1rem;
+    }
+
+    footer h2 {
+        text-align: left;
+        margin-bottom: 1rem;
+    }
+
+}
+
+@media (min-width: 690px){
+    #mail-phone a {
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width: 870px){
+    #mail-phone a{
+        font-size: 1.45rem;
+    }
+
+    #socials a img{
+        height: 4.5rem;
+    }
+}
+
+
 
 
 
