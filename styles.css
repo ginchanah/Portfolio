@@ -13,7 +13,8 @@
 
     /* font-family */
     --font-body:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    --font-heading: 'Jaro', sans-serif;
+    --font-heading: 'chewy', 'Jaro', sans-serif;
+    --font-heading-alt: 'Chewy', sans-serif;
 
     /* margins and heights */
     --header-height: 5rem;
@@ -45,6 +46,12 @@ h1, h2, h3, h4 {
     font-family: var(--font-heading);
     margin: 0px;
     letter-spacing: 1px;
+}
+
+@media (max-width: 682px) {
+    h1, h2, h3, h4 {
+        font-family: var(--font-heading-alt);
+    }
 }
 
 body {
