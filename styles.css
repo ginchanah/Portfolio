@@ -85,7 +85,7 @@ main {
 header {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: end;
 
     padding-bottom: 1rem;
 
@@ -209,11 +209,9 @@ header {
 
 /* media query bigger display */
 
-@media  (min-width: 588px){
-    header{
-        align-items: end;
-    }
-}
+
+   
+
 
 @media (min-width: 734px) {
     header{
@@ -515,6 +513,10 @@ header {
 
     .portfolio-item a .tag-container{
         align-self: end;
+        justify-self: end;
+        display: flex;
+        flex-direction: row-reverse;
+
     }
 
     .portfolio-item a figure {
