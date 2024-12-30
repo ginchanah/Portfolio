@@ -47,3 +47,8 @@ headerItems.forEach(headerItem => {
         headerItem.classList.remove('active'); // Remove class if mouse leaves while pressed
     });
 });
+
+var scale = Math.min( 
+    availableWidth / contentWidth, 
+    availableHeight / contentHeight 
+);

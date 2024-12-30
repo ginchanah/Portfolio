@@ -17,10 +17,11 @@
     --font-heading-alt: 'Chewy', sans-serif;
 
     /* margins and heights */
-    --header-height: 5rem;
+    --header-height: 8vh;
     
     /* radiussses */
     --border-radius: 1rem;
+
 }
 
 
@@ -73,6 +74,11 @@ main {
     overflow: hidden;
 }
 
+/* weird google thing */
+body>div:last-of-type{
+    display: none !important;
+}
+
 
 /* **********+++ */
 /* Index page    */
@@ -90,8 +96,8 @@ header {
     padding-bottom: 1rem;
 
     background: var(--color-yellow);
+   
 
-    
 }
 
 .hamburger-button{
@@ -290,20 +296,27 @@ header {
     display: grid;
     justify-items: center;
     padding-top: 2rem;
+
+    max-height: fit-content;
+    min-height: calc(100vh - var(--header-height)); ;
+    
 }
 
 .landing-page h1{
     margin: 0px;
     padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
 }
 
 .landing-page svg {
     display: none;
 }
 
-.landing-page>div{
+.whole-bubble{
     display: grid;
     justify-items: center;
+    max-height: min-content;
 }
 
 /* Grid positioning */
@@ -330,6 +343,7 @@ header {
     border-left: 1rem solid transparent;
     border-right: 1rem solid transparent;
     border-bottom: 2rem solid var(--color-white);
+    align-self:flex-end;
 }
 
 /* speechbubble layout */
@@ -356,12 +370,15 @@ header {
     padding: 2rem 0 2rem 0;
     display: grid;
     justify-items: center;
+    height: min-content;
+   
 }
 
 .scroll p{
     font-size: 1.3rem;
     margin: 0 0 0.5rem 0;
     font-family: var(--font-heading);
+    height: min-content;
 }
 
 @media (max-width: 682px) {
@@ -373,21 +390,40 @@ header {
 /* media bigger screen landing page */
 
 @media (min-width: 734px) {
+    .landing-page{
+        grid-template-rows: 2vh min-content 2vh max-content;
+        padding-top: 5vh;
+    }
+
     .landing-page h1{
-        max-width: 37rem;
-        padding: 4.5rem 0;
+        min-width: 45vw;
+        max-width: 77vw;
+        padding: 0px;
+    }
+
+    .landing-page h1 img{
+        min-width: 100%;
     }
 
     .whole-bubble{
-        position: absolute;
+        position: relative;
+        
+    }
+    .speechbubble{
+        min-width: 55vw;
+        max-width: 55vw;
     }
 
     .whole-bubble:first-of-type{
-        transform: translate(-7rem, 0px);
+        transform: translate(-20vw, 0vw);
     }
 
     .whole-bubble:nth-of-type(2){
-        transform: translate(7rem, 27.4rem);
+        transform: translate(20vw, -13vw);
+    }
+
+    .whole-bubble>div {
+        transform: scale();
     }
 
     .triangletop {
@@ -400,33 +436,25 @@ header {
         border-left: 0.5rem solid transparent;
         border-right: 2rem solid transparent;
     }
+
+
+    .scroll{
+        align-self: end;
+    }
 }
 
 @media (min-width: 854px) {
-    .landing-page h1{
-        padding: 7rem 0 6rem 0;
-    }
+    
 
     .landing-page p {
         font-size: 1.2rem;
     }
 
 
-    .whole-bubble:first-of-type{
-        transform: translate(-10rem, 2rem);
-    }
-
-    .whole-bubble:nth-of-type(2){
-        transform: translate(10rem, 30rem);
-    }
-
 }
 
 @media (min-width: 1200px){
-    .landing-page h1{
-        max-width: 45rem;
-        padding: 5rem 0 2rem 0;
-    }
+    
 
     .landing-page p {
         font-size: 1.5rem;
@@ -434,17 +462,8 @@ header {
         padding-bottom: 0.5rem;
     }
 
-    .speechbubble{
-        max-width: 35rem;
-    }
+    
 
-    .whole-bubble:first-of-type{
-        transform: translate(-19rem, 2rem);
-    }
-
-    .whole-bubble:nth-of-type(2){
-        transform: translate(19rem, 28rem);
-    }
 
     .triangletop {
         margin: 0 0 0 15rem;
@@ -454,6 +473,26 @@ header {
         margin: 0 17.5rem 0 0;
     }
 
+}
+
+@media (min-width: 1235px){
+    .speechbubble{
+        min-width: 45vw;
+        max-width: 45vw;
+    }
+}
+
+@media (min-width: 1419px){
+    .whole-bubble:nth-of-type(2){
+        transform: translate(20vw, -9vw);
+    }
+}
+
+@media (min-width: 1866px){
+    .speechbubble{
+        min-width: 35vw;
+        max-width: 35vw;
+    }
 }
 
 #turntransparent {
@@ -731,6 +770,29 @@ header {
         margin: 5rem 0;
     }
 
+}
+
+@media (min-width: 1775px){
+    .portfolio-item-container{
+        transform: scale(100%);
+        margin: 0rem 0;
+        
+    }
+}
+
+@media (min-width: 2010px){
+    .portfolio-item-container{
+        transform: scale(110%);
+        margin: 5rem 0;
+        
+    }
+}
+
+@media (min-width: 2359px){
+    .portfolio-item-container{
+        transform: scale(100%);
+        margin: 5rem 0;
+    }
 }
 
     /* ************************** */
