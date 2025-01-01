@@ -524,18 +524,23 @@ header {
 
 
 .portfolio-item{
-    
+    cursor: pointer;
     max-width: 100vw;
     border-radius: var(--border-radius);
     overflow: hidden;
 
     transition: 0.2s;
+
+    background: var(--color-yellow);
+
 }
 
-.portfolio-item button {
+.portfolio-item .button {
     background: var(--color-yellow);
     border: none;
     padding: 0px;
+    text-align: left;
+   
 }
 
 
@@ -549,14 +554,14 @@ header {
         height: 15rem;
     }
 
-    .portfolio-item button {
+    .portfolio-item .button {
         height: 100%;
         display: grid;
         grid-template-columns: 2.5fr 6fr;
         grid-template-rows: max-content max-content 1fr;
     }
 
-    .portfolio-item button .tag-container{
+    .portfolio-item .button .tag-container{
         align-self: end;
         justify-self: end;
         display: flex;
@@ -564,18 +569,18 @@ header {
 
     }
 
-    .portfolio-item button figure {
+    .portfolio-item .button figure {
         grid-column: 1/2;
         min-height: 100%;
         grid-row: 1/-1;
     }
 
-    .portfolio-item button figure img {
+    .portfolio-item .button figure img {
         height: auto;
         width: auto;
     }
 
-    .portfolio-item button>*:not(figure){
+    .portfolio-item .button>*:not(figure){
         grid-column: 2/3;
     }
 
@@ -623,7 +628,7 @@ header {
 
 /* portfolio item appearance */
 
-.portfolio-item button figure {
+.portfolio-item .button figure {
     width: 100%;
     margin: 0px;
     overflow: hidden;
@@ -633,7 +638,7 @@ header {
     align-items: center; 
 }
 
-.portfolio-item button figure img {
+.portfolio-item .button figure img {
     width: 100%;
 }
 
@@ -655,7 +660,7 @@ header {
 }
 
 /* headings of portfolio items */
-.portfolio article>button>div:first-of-type{
+.portfolio article>.button>div:first-of-type{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -666,12 +671,12 @@ header {
     position: relative;
 }
 
-.portfolio article>button{
+.portfolio article>.button{
     text-decoration: none;
     color: var(--color-text);
 }
 
-.portfolio article>button>div:first-of-type>p{
+.portfolio article>.button>div:first-of-type>p{
     position: absolute;
     margin: 0px;
     top: 2.6rem;

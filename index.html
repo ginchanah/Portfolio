@@ -85,7 +85,7 @@
             <h2>Portfolio</h2>
             <div class="portfolio-item-container">
                 <article class="portfolio-item" id="minigame">
-                    <button aria-label="Mini Game Website">
+                    <a href="minigame.html" class="button">
                         <figure id="minigamefigure">
                             <img src="images/mini-game.png" alt="a blue website with nothing but a green start button">
                         </figure>
@@ -100,11 +100,17 @@
                             </p>
                             <p class="frontendtag">Frontend</p>
                         </div>
-                    </button>
+                    </a>
+
+                    <dialog id="portfolioModal">
+                        <p>This is a modal dialog!</p>
+                        <button id="closeModal">Close</button>
+                    </dialog>
                 </article>
+                
 
                 <article class="portfolio-item" id="lievestad">
-                    <button aria-label="Sweet Green City Website">
+                    <a href="" class="button">
                         <figure id="lievestadfigure">
                             <img src="images/delievegroenestad.png" alt="a website about a bookshop">
                         </figure>
@@ -120,11 +126,11 @@
                             </p>
                             <p class="frontendtag">Frontend</p>
                         </div>
-                    </button>
+                    </a>
                 </article>
 
                 <article class="portfolio-item" id="boekenzoeker">
-                    <button aria-label="Book Searcher Website">
+                    <a href=""  class="button">
                         <figure id="boekenzoekerfigure">
                             <img src="images/boekenzoeker.png" alt="a colorful app in which you can search for books">
                         </figure>
@@ -141,11 +147,11 @@
                             <p class="UItag">UI Design
                             </p>
                         </div>
-                    </button>
+                    </a>
                 </article>
 
                 <article class="portfolio-item" id="illustration">
-                    <button aria-label="Posters and Logos">
+                    <a href="" class="button">
                         <figure id="illustrationfigure">
                             <img src="images/illustrationonepager.png" alt="an abstract poster for a cocktail bar">
                         </figure>
@@ -160,11 +166,13 @@
                             <p class="visualtag">Visual
                             </p>
                         </div>
-                    </button>
+                    </a>
+
+                    
                 </article>
 
                 <article class="portfolio-item" id="motiongraphic">
-                    <button aria-label="Motion Graphic">
+                    <a href="" class="button">
                         <figure id="motiongraphicfigure">
                             <img src="images/motion-graphic.png" alt="colorful dots in a circle">
                         </figure>
@@ -178,11 +186,13 @@
                             <p class="visualtag">Visual
                             </p>
                         </div>
-                    </button>
+                    </a>
                 </article>
 
                 <p class="more">more to come...</p>
-            </div>   
+            </div>  
+            
+            
         </section>
 
         <section class="about" id="about">
@@ -210,7 +220,7 @@
                 <img src="images/photoofme.png" alt="a photo of Maja">
             </figure>
 
-            <a href="/media/CV.pdf" class="cv" target="_blank">
+            <a href="/media/Design.pdf" class="cv" target="_blank">
                 <img src="images/CV.png" alt="Curriculum Vitae">
                 <p>find my CV here</p>
             </a>
