@@ -1374,7 +1374,7 @@ footer h2 {
     background: var(--color-blue-dark);
 }
 
-#boekenzoekerhtml .portfolio-image{
+#boekenzoekerhtml .portfolio-image, #motiongraphichtml .portfolio-image{
     aspect-ratio: 1/1;
     min-width: 100%;
     border-radius: 0px;
@@ -1382,30 +1382,29 @@ footer h2 {
     margin: 2rem 0 1rem 0;
 }
 
-#boekenzoekerhtml .description {
+#boekenzoekerhtml .description, #motiongraphichtml .description {
     display: block;
 }
 
-#boekenzoekerhtml .description>div:first-of-type{
+#boekenzoekerhtml .description>div:first-of-type, #motiongraphichtml .description>div:first-of-type{
     display: grid;
 }
 
 @media (min-width: 700px){
-    #boekenzoekerhtml .description>div:first-of-type{
+    #boekenzoekerhtml .description>div:first-of-type, #motiongraphichtml .description>div:first-of-type{
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
        
     }
 
-    .portfoliohtml .description > div:nth-of-type(2){
+    #boekenzoekerhtml .description > div:nth-of-type(2), #motiongraphichtml .description > div:nth-of-type(2){
         margin: 0 3rem;
     }
 }
 
 @media (min-width: 800px){
-    
 
-    .portfoliohtml .description > div:nth-of-type(2){
+    #boekenzoekerhtml .description > div:nth-of-type(2), #motiongraphichtml .description > div:nth-of-type(2){
         margin: 0 5rem;
     }
 }
@@ -1414,8 +1413,17 @@ footer h2 {
 /* MOTIONGRAPHIC HTML         */
 /* ************************** */
 
+#motiongraphichtml h1, #motiongraphichtml  .sitebutton, #motiongraphichtml  .heading h2, #motiongraphichtml .table, #motiongraphichtml+footer{
+    background: var(--color-red);
+}
 
-
+#motiongraphichtml .portfolio-image{
+    aspect-ratio: 16/9;
+    min-width: 100%;
+    border-radius: 0px;
+    /* border: none; */
+    margin: 2rem 0 1rem 0;
+}
 
 
 
