@@ -42,6 +42,10 @@
     }
 }
 
+main {
+    background-color: var(--color-yellow);
+}
+
 
 h1, h2, h3, h4 {
     font-family: var(--font-heading);
@@ -291,6 +295,10 @@ header {
     /* Section 1: Landing Page    */
     /* ************************** */
 
+main{
+    display: grid;
+}
+
 .landing-page {
     background: var(--color-yellow);
     display: grid;
@@ -299,6 +307,9 @@ header {
 
     max-height: fit-content;
     min-height: calc(100vh - var(--header-height)); ;
+
+    
+    justify-self: center;
     
 }
 
@@ -307,6 +318,7 @@ header {
     padding: 1rem 2rem;
     display: flex;
     align-items: center;
+    max-width: 778px;
 }
 
 .landing-page svg {
@@ -354,7 +366,10 @@ header {
     border-radius: var(--border-radius);
 
     max-width: 30rem;
+    
 }
+
+
 
 .speechbubble p{
    padding: 1rem;
@@ -491,8 +506,21 @@ header {
 
 @media (min-width: 1866px){
     .speechbubble{
-        min-width: 35vw;
-        max-width: 35vw;
+        min-width: 708px;
+        max-width: 708px;
+    }
+
+    .landing-page h1{
+        min-width: 850px;
+        max-width: 850px;
+    }
+
+    .whole-bubble:nth-of-type(1){
+        transform: translate(-320px, -30px);
+    }
+
+    .whole-bubble:nth-of-type(2){
+        transform: translate(250px, -95px);
     }
 }
 
@@ -1338,6 +1366,53 @@ footer h2 {
     
 }
 
+/* ************************** */
+/* BOEKENZOEKER HTML             */
+/* ************************** */
+
+#boekenzoekerhtml h1, #boekenzoekerhtml  .sitebutton, #boekenzoekerhtml  .heading h2, #boekenzoekerhtml .table, #boekenzoekerhtml+footer{
+    background: var(--color-blue-dark);
+}
+
+#boekenzoekerhtml .portfolio-image{
+    aspect-ratio: 1/1;
+    min-width: 100%;
+    border-radius: 0px;
+    border: none;
+    margin: 2rem 0 1rem 0;
+}
+
+#boekenzoekerhtml .description {
+    display: block;
+}
+
+#boekenzoekerhtml .description>div:first-of-type{
+    display: grid;
+}
+
+@media (min-width: 700px){
+    #boekenzoekerhtml .description>div:first-of-type{
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+       
+    }
+
+    .portfoliohtml .description > div:nth-of-type(2){
+        margin: 0 3rem;
+    }
+}
+
+@media (min-width: 800px){
+    
+
+    .portfoliohtml .description > div:nth-of-type(2){
+        margin: 0 5rem;
+    }
+}
+
+/* ************************** */
+/* MOTIONGRAPHIC HTML         */
+/* ************************** */
 
 
 
