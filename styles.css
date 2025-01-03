@@ -1078,6 +1078,7 @@ footer h2 {
 
 .portfoliohtml{
     background: var(--color-yellow);
+    min-height: 100vh;
 }
 
 .portfoliohtml h1{
@@ -1090,6 +1091,7 @@ footer h2 {
     font-size: 2rem;
     padding-bottom: 0rem;
     padding-top: 1rem;
+    
 }
 
 /* heading */
@@ -1099,6 +1101,14 @@ footer h2 {
     flex-direction: column-reverse;
     align-items: center;
     
+}
+
+.portfoliohtml .heading>h2{
+    order: -1;
+    width: 100vw;
+    padding: 0 0 0.5rem 0;
+    font-family: var(--font-body);
+    font-size: 1.5rem;
 }
 
 
@@ -1254,6 +1264,8 @@ footer h2 {
     border-radius: var(--border-radius);
     overflow: hidden;
     border: solid black;
+    
+    aspect-ratio: 645/449;
 }
 
 .portfoliohtml .portfolio-image img{
@@ -1299,6 +1311,20 @@ footer h2 {
     
 }
 
+@media (min-width: 1238px){
+    .portfoliohtml{
+        display: grid;
+        justify-items: center;
+        align-items: start;
+        align-content: start;
+    }
+    .portfoliohtml article{
+        max-width: 1111px;
+    }
+}
+
+
+
 
 
 
@@ -1307,14 +1333,14 @@ footer h2 {
 /* MINI-GAME HTML             */
 /* ************************** */
 
-#minigamehtml h1, #minigamehtml .sitebutton{
+#minigamehtml h1, #minigamehtml .sitebutton, #lievestadhtml h1, #lievestadhtml .heading h2, #lievestadhtml .sitebutton{
     background: var(--color-green);
     
 }
 
-/* #minigamehtml{
-    max-height: 910px;
-} */
+
+
+
 
 
 
