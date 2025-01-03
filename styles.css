@@ -440,6 +440,7 @@ header {
 
     .scroll{
         align-self: end;
+        margin-top: 1rem;
     }
 }
 
@@ -835,7 +836,7 @@ header {
 
 /* Find my CV layout */
 
-.cv {
+/* .cv {
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
@@ -865,7 +866,7 @@ header {
 
 .cv p::after{
     content: '→';
-}
+} */
 
 
 @media (min-width: 558px){
@@ -881,7 +882,7 @@ header {
         max-width: 217px;
     }
 
-    .cv {
+    /* .cv {
         grid-column: 1/2;
         grid-row: 3/4;
         margin: 0 0 0 2rem;
@@ -889,7 +890,7 @@ header {
 
     .cv p {
         font-size: 1.3rem;
-    }
+    } */
 
 
     .abouttext {
@@ -899,9 +900,9 @@ header {
 }
 
 @media (min-width: 592px){
-    .cv{
+    /* .cv{
         justify-self: right;
-    }
+    } */
 
     #aboutfoto{
         justify-self: left;
@@ -913,12 +914,12 @@ header {
         grid-column: 1/2; 
     }
 
-    .cv{
+    /* .cv{
         justify-self: center;
         align-self: start;
         margin-right: 8rem;
         margin-bottom: 2rem;
-    }
+    } */
 
     #aboutfoto{
         grid-row: 2/4;
@@ -934,9 +935,9 @@ header {
         font-size: 1.1rem;
     }
 
-    .cv p {
+    /* .cv p {
         font-size: 1.5rem;
-    }
+    } */
 
     .about {
         grid-template-columns: 2fr 1.3fr;
@@ -962,9 +963,9 @@ header {
         font-size: 1.2rem;
     }
 
-    .cv p {
+    /* .cv p {
         font-size: 1.7rem;
-    }
+    } */
 
     #aboutfoto{
         max-width: 470px;
@@ -1072,6 +1073,9 @@ footer h2 {
 /* ************************** */
 /* All Portfolio Item HTMLS   */
 /* ************************** */
+
+/* headings */
+
 .portfoliohtml{
     background: var(--color-yellow);
 }
@@ -1097,6 +1101,7 @@ footer h2 {
     
 }
 
+
 /* back button */
 
 .portfoliohtml .backbutton{
@@ -1104,7 +1109,7 @@ footer h2 {
     width: fit-content;
     text-decoration: none;
     color: var(--color-text);
-    font-family: var(--font-heading-alt);
+    font-family: var(--font-heading);
     display: flex;
     align-items: center;
     padding: 0.5rem;
@@ -1114,6 +1119,9 @@ footer h2 {
     box-shadow: -5px 5px 0px black;
     margin-bottom: 1rem;
 
+    font-size: 1.5rem;
+    transition: 0.2s;
+
 }
 
 .portfoliohtml .backbutton div{
@@ -1122,21 +1130,36 @@ footer h2 {
     border-top: 0.8rem solid transparent;
 }
 
-.portfoliohtml .backbutton{
-    font-size: 1.3rem;
-    transition: 0.2s;
-}
 
 .backbutton:active{
     box-shadow: none;
     transform: translate(-9px, 9px);
 }
 
+
+
 /* articles */
 
 .portfoliohtml article{
     margin: 0 1rem;
 }
+
+@media (min-width: 1118px){
+
+    .portfoliohtml article{
+        margin-right: 4rem;
+        margin-left: 4rem
+    }
+    
+}
+
+/* description */
+
+.portfoliohtml .description>div:first-of-type{
+    display: grid;
+}
+
+
 
 .portfoliohtml .table {
     display: grid;
@@ -1146,6 +1169,7 @@ footer h2 {
     padding: 1rem;
     border-radius: 1rem;
     background: var(--color-green);
+    justify-self: center;
 
 }
 
@@ -1157,13 +1181,36 @@ footer h2 {
     margin: 0px;
 }
 
-/* site button */
 
 .portfoliohtml .description>div:nth-of-type(2){
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+
+@media (min-width: 455px){
+    .portfoliohtml .table {
+        max-width: 405px;
+        align-self: center;
+    
+    }
+}
+
+
+@media (min-width: 734px){
+    .portfoliohtml .description{
+        display: grid;
+        grid-template-columns: 4fr 3fr;
+    }
+}
+
+
+
+
+
+
+/* go to site button */
 
 .portfoliohtml .sitebutton {
     text-decoration: none;
@@ -1172,17 +1219,103 @@ footer h2 {
     align-items: center;
     gap: 0.5rem;
     align-items: center;
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+
+    box-shadow: -5px 5px 0px black;
+    border-radius: 0.5rem;
+
+    padding: 0.5rem;
+
+    margin-top: 2rem;
+
+    transition: 0.2s;
 }
+
+
+
+@media (max-width: 682px){
+    .portfoliohtml .sitebutton, .portfoliohtml .backbutton{
+        font-family: var(--font-heading-alt);
+    }
+
+    
+}
+
+.sitebutton:active{
+    box-shadow: none;
+    transform: translate(-9px, 9px);
+
+}
+
+/* image */
+
+.portfoliohtml .portfolio-image{
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    border: solid black;
+}
+
+.portfoliohtml .portfolio-image img{
+    transform: scale(105%);
+}
+
+@media (min-width: 734px){
+    .portfoliohtml .portfolio-image img{
+        transform: scale(106%);
+    }
+}
+
+
+/* conclusion */
+
+.portfoliohtml .conclusion{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.portfoliohtml .conclusion>figure{
+    text-align: center;
+}
+
+@media (min-width: 734px){
+    .portfoliohtml .conclusion{
+        display: grid;
+        grid-template-columns: 4fr 3fr;
+        margin: 3rem 0;
+    }
+}
+
+@media (min-width: 1118px){
+
+    .portfoliohtml article{
+        margin-right: 4rem;
+        margin-left: 4rem
+    }
+
+    .portfoliohtml .conclusion{
+        margin: 3rem 4rem;
+    }
+    
+}
+
+
+
 
 
 /* ************************** */
 /* MINI-GAME HTML             */
 /* ************************** */
 
-#minigamehtml h1{
+#minigamehtml h1, #minigamehtml .sitebutton{
     background: var(--color-green);
     
 }
+
+/* #minigamehtml{
+    max-height: 910px;
+} */
+
 
 
 
