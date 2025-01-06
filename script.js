@@ -51,33 +51,3 @@ headerItems.forEach(headerItem => {
 
 
 
-// open modal
-document.addEventListener("DOMContentLoaded", () => {
-
-    const modalButton = document.querySelector(".button"); // Target the button inside the article
-
-    const portfolioModal = document.getElementById("portfolioModal"); // Get the dialog
-
-    const closeModalButton = document.getElementById("closeModal"); // Get the close button
-
-
-    // Add click event listener to the button
-
-    modalButton.addEventListener("click", () => {
-
-        portfolioModal.showModal(); // Show the modal dialog
-
-        console.log("button clicked"); // Log to console
-
-    });
-
-
-    // Add click event listener to the close button
-
-    closeModalButton.addEventListener("click", () => {
-
-        portfolioModal.close(); // Close the modal dialog
-
-    });
-
-});
