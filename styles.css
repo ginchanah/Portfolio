@@ -520,7 +520,7 @@ main{
     }
 
     .whole-bubble:nth-of-type(2){
-        transform: translate(250px, -95px);
+        transform: translate(250px, -105px);
     }
 }
 
@@ -812,7 +812,7 @@ main{
 
 }
 
-@media (min-width: 1775px){
+@media (min-width: 1762px){
     .portfolio-item-container{
         transform: scale(100%);
         margin: 0rem 0;
@@ -828,10 +828,20 @@ main{
     }
 }
 
-@media (min-width: 2359px){
+@media (min-width: 2290px){
+    .portfolio{
+        display: grid;
+    }
     .portfolio-item-container{
-        transform: scale(100%);
-        margin: 5rem 0;
+        grid-template-columns:1fr 1fr 1fr;
+        max-width: 2009px;
+        align-self: center;
+        justify-self: center;
+        
+    }
+
+    .portfolio-item{
+        max-width: 616px;
     }
 }
 
@@ -1424,6 +1434,123 @@ footer h2 {
     /* border: none; */
     margin: 2rem 0 1rem 0;
 }
+
+
+/* ************************** */
+/* POSTERS LOGOS HTML         */
+/* ************************** */
+
+#posterslogoshtml h1, #posterslogoshtml+footer{
+    background: var(--color-red);
+}
+
+#posterslogoshtml{
+    display: block;
+}
+
+
+
+
+/* list */
+
+
+#posterslogoshtml ul {
+    list-style: none;
+
+    margin: 2.5rem;
+    padding: 0px;
+    row-gap: 2.5rem;
+    column-gap: 2rem;
+    
+
+    align-items: center;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+
+
+#posterslogoshtml li{
+    max-width: 100%;
+}
+
+
+/* figure */
+
+#posterslogoshtml ul figure {
+    margin: 0px;
+    padding: 0px;
+}
+
+#posterslogoshtml figcaption{
+    text-align: center;
+    margin: 0 10%;
+}
+
+@media (min-width: 630px){
+    #posterslogoshtml ul{
+        max-height: 450vw;
+    }
+
+    #posterslogoshtml ul li{
+        max-width: 40%;
+        min-width: 0px;
+    }
+}
+
+@media (min-width: 1000px){
+    #posterslogoshtml ul{
+        max-height: 260vw;
+    }
+
+    #posterslogoshtml ul li{
+        max-width: 28vw;
+    }
+}
+
+@media (min-width: 1220px){
+    #posterslogoshtml ul{
+        max-height: 220vw;
+        min-height: min-content;
+    }
+
+    #posterslogoshtml ul li{
+        max-width: 28vw;
+    }
+}
+
+@media (min-width: 1238px){
+    #posterslogoshtml section {
+        display: grid;
+        justify-items: center;
+    }
+    
+    #posterslogoshtml ul li{
+        max-width: 340px;
+        
+    }
+    #posterslogoshtml ul{
+        padding: 2rem;
+        margin: 0px;
+        min-width: 100vw;
+    }
+   
+}
+
+@media (min-width: 1272px){
+    
+
+    #posterslogoshtml ul{
+        max-height: 2704px;
+        min-width: 1272px;
+        max-width: 1272px;
+    }
+    
+   
+}
+
 
 
 
