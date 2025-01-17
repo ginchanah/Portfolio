@@ -569,6 +569,7 @@ main{
     border: none;
     padding: 0px;
     text-align: left;
+    display: grid;
    
 }
 
@@ -577,6 +578,16 @@ main{
     transform: scale(103%);
     filter: contrast(120%);
 }
+
+.portfolio-item .button .tag-container{
+    align-self: end;
+    justify-self: end;
+    display: flex;
+    flex-direction: row-reverse;
+
+}
+
+
 
 @media (min-width: 570px){
     .portfolio-item{
@@ -1390,7 +1401,14 @@ footer h2 {
     border-radius: 0px;
     border: none;
     margin: 2rem 0 1rem 0;
+    
 }
+
+#boekenzoekerhtml .portfolio-image iframe{
+    min-height: 100%;
+}
+
+
 
 #boekenzoekerhtml .description, #motiongraphichtml .description {
     display: block;
