@@ -31,7 +31,7 @@ const header = document.getElementById('header-index');
         }
 });
 
-const headerItems = document.querySelectorAll('.header-item');
+const headerItems = document.querySelectorAll('.header-item, .sitebutton, .backbutton');
 
 
 headerItems.forEach(headerItem => {

@@ -1135,6 +1135,11 @@ footer h2 {
 
 }
 
+.portfoliohtml .backbutton:hover{
+    transform: scale(105%);
+
+}
+
 .portfoliohtml .backbutton div{
     border-bottom: 0.8rem solid transparent;
     border-right: 1.6rem solid var(--color-text);
@@ -1142,7 +1147,7 @@ footer h2 {
 }
 
 
-.backbutton:active{
+.backbutton.active{
     box-shadow: none;
     transform: translate(-9px, 9px);
 }
@@ -1243,17 +1248,24 @@ footer h2 {
     transition: 0.2s;
 }
 
+.portfoliohtml .sitebutton:hover{
+    transform: scale(105%);
+}
+
 
 
 @media (max-width: 682px){
     .portfoliohtml .sitebutton, .portfoliohtml .backbutton{
         font-family: var(--font-heading-alt);
+        box-shadow: -9px 9px;
+
+        transition: transform 0.2s;
     }
 
     
 }
 
-.sitebutton:active{
+.sitebutton.active{
     box-shadow: none;
     transform: translate(-9px, 9px);
 
